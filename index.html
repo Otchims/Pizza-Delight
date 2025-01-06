@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delight</title>
+    <link rel="icon" type="image/x-icon" href="pizza.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Delight</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">Корзина (<span id="cart-count">0</span>)</button>
+    </header>
+    <main>
+        <section id="menu">
+            <div class="menu-header">
+            <h2>Наше меню</h2>
+        </div>
+        <div class="menu-header">
+            <h2>Пиццы</h2>
+        </div>
+        <div class="menu-content">
+            <div class="pizza-card">
+                <img src="margarita.png" alt="Маргарита">
+                <h3>Маргарита</h3>
+                <p>Классическая пицца с сыром и томатами. Цена: 250грн</p>
+                <button onclick="addToCart('Маргарита', 250)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="peperoni.jpg" alt="Пепперони">
+                <h3>Пепперони</h3>
+                <p>Острая пицца с салями и сыром. Цена: 300грн</p>
+                <button onclick="addToCart('Пепперони', 300)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="4sira.jpg" alt="4 Сыра">
+                <h3>4 сыра</h3>
+                <p>Классическая пицца с 4 видами сыра. Цена: 275грн</p>
+                <button onclick="addToCart('4 сыра', 275)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="more.jpg" alt="more">
+                <h3>Пицца с морепродуктами</h3>
+                <p>Пицца с различными морскими продуктами. Цена: 375грн</p>
+                <button onclick="addToCart('Морепродукты', 375)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="neapol.jpg" alt="neapol">
+                <h3>Неаполитанская пицца</h3>
+                <p>Пицца получила название в честь города, где ее впервые приготовили – Неаполя. Цена: 325грн</p>
+                <button onclick="addToCart('Неаполитанская пицца', 325)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="pul.png" alt="pul">
+                <h3>Пицца Пульезе</h3>
+                <p>Вегетарианская пицца. Цена: 250грн</p>
+                <button onclick="addToCart('Пульезе', 250)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="4sesona.jpg" alt="4sesona">
+                <h3>Пицца 4 сезона</h3>
+                <p>Пицца совмещающая в себе 4 вкуса. Цена: 450грн</p>
+                <button onclick="addToCart('Пульезе', 450)">Добавить в корзину</button>
+            </div>
+            <div class="pizza-card">
+                <img src="caprichosa.jpg" alt="caprichosa">
+                <h3>Пицца Капричоза</h3>
+                <p>Итальянская пицца, приготовленная из запеченной ветчины, грибов, артишоков, помидоров и сыра моцарелла. Цена: 325грн</p>
+                <button onclick="addToCart('капричоза', 325)">Добавить в корзину</button>
+            </div>
+        </section>
+            <section id="desserts">
+                <div class="menu-header">
+                    <h2>Десерты</h2>
+                </div>
+                <div class="menu-content">
+                    <div class="pizza-card">
+                        <img src="cheese-cake.jpg" alt="cheese-cake">
+                        <h3>Чиз-кейк</h3>
+                        <p>Сыросодержащий десерт.150г.Цена: 200грн</p>
+                        <button onclick="addToCart('Чиз-кейк', 200)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="Ecler.jpg" alt="Ecler">
+                        <h3>Еклер</h3>
+                        <p>Пирожное в виде трубочки из заварного теста, покрытой помадкой.100г.Цена: 100грн</p>
+                        <button onclick="addToCart('Еклер', 100)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="panna-cota.jpg" alt="panna-cota">
+                        <h3>Панна-котта</h3>
+                        <p>Североитальянский десерт из сливок, сахара, желатина и ванили.100г.Цена: 130грн</p>
+                    <button onclick="addToCart('Панна-котта', 130)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="tiramisu.jpg" alt="tiramisu">
+                        <h3>Тирамису</h3>
+                        <p>Итальянский многослойный десерт.200г.Цена: 300грн</p>
+                        <button onclick="addToCart('Тирамису', 300)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="ice-cream.jpg" alt="ice-cream">
+                        <h3>Мороженное(шариками)</h3>
+                        <p>В наличии: шоколадное, ванильное, клубничное, пломбир.200г.Цена: 250грн</p>
+                        <button onclick="addToCart('Мороженное', 250)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="crossain.jpg" alt="crossain">
+                        <h3>Круассан с шоколадом</h3>
+                        <p>Булочка в форме полумесяца (рогалика) из слоёного теста.200г.Цена: 100грн</p>
+                        <button onclick="addToCart('Круассан с', 100)">Добавить в корзину</button>
+                    </div>
+                    <div class="pizza-card">
+                        <img src="romovaya_baba.jpg" alt="romovaya_baba">
+                        <h3>Ромовая баба</h3>
+                        <p>Кондитерское изделие, представляет собой разновидность бабы — кекса.50г.Цена: 75грн</p>
+                        <button onclick="addToCart('Ромовая баба', 75)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </section>
+        <section id="reviews">
+            <h2>Отзывы</h2>
+            <div id="review-list"></div>
+            <form id="review-form">
+                <h3>Оставьте свой отзыв</h3>
+                <textarea id="review-text" placeholder="Ваш отзыв..." required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы готовим вкуснейшую пиццу с любовью! Используем только свежие ингредиенты.</p>
+        </section>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Телефон: +38(068)3690677</p>
+            <p>Адрес: ул. Вкусная, 10, г. Одесса</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Delight</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h3>Корзина</h3>
+            <ul id="cart-items"></ul>
+            <p>Итого: <span id="total-price">0грн</span></p>
+            <button onclick="checkout()">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
